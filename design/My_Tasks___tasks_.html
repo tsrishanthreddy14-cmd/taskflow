@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Tasks — TaskFlow</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="b9a2ac788be3e5fe===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'success': '#006A61',
+        'on-success': '#FFFFFF',
+        'warning': '#A73400',
+        'on-warning': '#FFFFFF',
+        'light-primary': '#0037B0',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#1D4ED8',
+        'light-on-primary-container': '#CAD3FF',
+        'light-secondary': '#006A61',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#86F2E4',
+        'light-on-secondary-container': '#006F66',
+        'light-tertiary': '#7F2500',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#A73400',
+        'light-on-tertiary-container': '#FFC9B7',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FAF8FF',
+        'light-on-background': '#1A1B23',
+        'light-surface': '#FAF8FF',
+        'light-surface-dim': '#D9D9E5',
+        'light-surface-bright': '#FAF8FF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F3F2FE',
+        'light-surface-container': '#EDEDF9',
+        'light-surface-container-high': '#E8E7F3',
+        'light-surface-container-highest': '#E2E1ED',
+        'light-on-surface': '#1A1B23',
+        'light-surface-variant': '#E0E1F4',
+        'light-on-surface-variant': '#434655',
+        'light-outline': '#747686',
+        'light-outline-variant': '#C4C5D7',
+        'light-inverse-surface': '#2E3039',
+        'light-inverse-on-surface': '#F0F0FB',
+        'light-inverse-primary': '#B7C4FF',
+        'dark-primary': '#B7C4FF',
+        'dark-on-primary': '#002682',
+        'dark-primary-container': '#1D4ED8',
+        'dark-on-primary-container': '#CAD3FF',
+        'dark-secondary': '#6BD8CB',
+        'dark-on-secondary': '#003732',
+        'dark-secondary-container': '#29A195',
+        'dark-on-secondary-container': '#001D1A',
+        'dark-tertiary': '#FFB59C',
+        'dark-on-tertiary': '#5C1900',
+        'dark-tertiary-container': '#A73400',
+        'dark-on-tertiary-container': '#FFC9B7',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#11131B',
+        'dark-on-background': '#E2E1ED',
+        'dark-surface': '#11131B',
+        'dark-surface-dim': '#11131B',
+        'dark-surface-bright': '#373942',
+        'dark-surface-container-lowest': '#0C0E16',
+        'dark-surface-container-low': '#1A1B23',
+        'dark-surface-container': '#1E1F27',
+        'dark-surface-container-high': '#282932',
+        'dark-surface-container-highest': '#33343D',
+        'dark-on-surface': '#E2E1ED',
+        'dark-surface-variant': '#434655',
+        'dark-on-surface-variant': '#C4C5D7',
+        'dark-outline': '#8E90A0',
+        'dark-outline-variant': '#434655',
+        'dark-inverse-surface': '#E2E1ED',
+        'dark-inverse-on-surface': '#2E3039',
+        'dark-inverse-primary': '#2151DA',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '32px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Afacad Flux"', 'sans-serif'],
+        'headline': ['"Afacad Flux"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['40px', { lineHeight: '46px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['30px', { lineHeight: '36px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.15px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Source+Code+Pro:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-background dark:bg-dark-background text-light-on-background dark:text-dark-on-background font-body antialiased">
+  <div class="min-h-screen flex bg-light-background dark:bg-dark-background">
+    <!-- Persistent Desktop Sidebar -->
+    <aside class="hidden lg:flex lg:flex-col w-64 shrink-0 min-h-screen bg-light-surface-container-lowest dark:bg-dark-surface-container-low border-r border-light-outline-variant dark:border-dark-outline-variant">
+      <div class="h-16 px-gutter-lg flex items-center gap-gutter-sm border-b border-light-outline-variant dark:border-dark-outline-variant">
+        <div class="w-8 h-8 rounded bg-light-primary dark:bg-dark-primary flex items-center justify-center text-light-on-primary dark:text-dark-on-primary">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <span class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface" data-design-text-token="headline-md">TaskFlow</span>
+      </div>
+
+      <nav aria-label="Main navigation" class="flex-1 px-3 py-gutter-md flex flex-col gap-1">
+        <a href="../dashboard/Dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span data-design-text-token="label-lg">Dashboard</span>
+        </a>
+        <a href="../tasks/MyTasks.html" aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &#39;FILL&#39; 1;">check_box</span>
+          <span data-design-text-token="label-lg">My Tasks</span>
+        </a>
+        <a href="../calendar/Calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+          <span data-design-text-token="label-lg">Calendar</span>
+        </a>
+        <a href="../analytics/Analytics.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">bar_chart</span>
+          <span data-design-text-token="label-lg">Analytics</span>
+        </a>
+        <a href="../settings/Settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span data-design-text-token="label-lg">Settings</span>
+        </a>
+      </nav>
+
+      <div class="p-gutter-md border-t border-light-outline-variant dark:border-dark-outline-variant">
+        <div class="p-3 rounded-md bg-light-surface-container-low dark:bg-dark-surface-container flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida/ALJJyrCnLkx4YuuSFXlq_9maeESvdiXOhpJw4lxht73KaQ4bTcnkEFPjL07K9OfcKVY5Vzt8Kpc0UDD6Id64bcnGuVjLZL39CXFD4WNMH94dpyQPg7uPj-UqawVT1N37zhF0DYk57uJ_1M2-dEhs1zhsIR1cr_-JQCbTs0rulQIHSJGES0qF9boVlMDVGI0XImsi99t3xkMiCnGTh9ThaL27b5j7oR_-BL9mo0joWcGsctbBQswn1Q" alt="Alex Rivera" class="w-9 h-9 rounded-full object-cover shrink-0" data-stitch-original-src="1a8e935156802808===../../images/avatar_alex.jpg">
+          <div class="min-w-0">
+            <p class="font-label text-label-lg text-light-on-surface dark:text-dark-on-surface truncate" data-design-text-token="label-lg">Alex Rivera</p>
+            <p class="font-body text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant truncate" data-design-text-token="label-md">alex@taskflow.app</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex flex-col min-w-0 min-h-screen">
+      <header class="sticky top-0 z-20 h-16 px-gutter-lg bg-light-surface-container-lowest dark:bg-dark-surface-container-low border-b border-light-outline-variant dark:border-dark-outline-variant flex items-center justify-between gap-gutter-md">
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="document.getElementById(&#39;mobile-nav-drawer&#39;).showModal()" aria-label="Open navigation menu" class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface dark:text-dark-on-surface hover:bg-light-surface-container dark:hover:bg-dark-surface-container">
+            <span class="material-symbols-outlined text-[22px]">menu</span>
+          </button>
+          <h1 class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface" data-design-text-token="headline-md">My Tasks</h1>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <button data-component-id="button-with-icon" data-component-type="button" data-component-variant="with-icon" type="button" onclick="openTaskModal()" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg hover:opacity-90 transition-colors duration-state-change ease-state-change">
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">add</span>
+            <span data-design-text-token="label-lg">Quick Add Task</span>
+          </button>
+
+          <button type="button" onclick="toggleTheme()" aria-label="Toggle color theme" class="inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+          </button>
+
+          <button type="button" aria-label="Notifications" class="relative inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+            <span class="material-symbols-outlined text-[20px]">notifications</span>
+            <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-light-error dark:bg-dark-error"></span>
+          </button>
+
+          <div class="relative">
+            <button type="button" onclick="document.getElementById(&#39;profile-menu&#39;).classList.toggle(&#39;hidden&#39;)" class="flex items-center gap-2 pl-2 pr-2 py-1 rounded hover:bg-light-surface-container dark:hover:bg-dark-surface-container transition-colors duration-state-change ease-state-change">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCnLkx4YuuSFXlq_9maeESvdiXOhpJw4lxht73KaQ4bTcnkEFPjL07K9OfcKVY5Vzt8Kpc0UDD6Id64bcnGuVjLZL39CXFD4WNMH94dpyQPg7uPj-UqawVT1N37zhF0DYk57uJ_1M2-dEhs1zhsIR1cr_-JQCbTs0rulQIHSJGES0qF9boVlMDVGI0XImsi99t3xkMiCnGTh9ThaL27b5j7oR_-BL9mo0joWcGsctbBQswn1Q" alt="Alex Rivera" class="w-8 h-8 rounded-full object-cover" data-stitch-original-src="1a8e935156802808===../../images/avatar_alex.jpg">
+              <span class="hidden sm:inline font-label text-label-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="label-lg">Alex</span>
+              <span class="material-symbols-outlined text-[18px] text-light-on-surface-variant dark:text-dark-on-surface-variant">expand_more</span>
+            </button>
+            <div id="profile-menu" class="hidden absolute right-0 mt-2 w-48 rounded-md bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant shadow-lg py-1 z-30">
+              <a href="../settings/Settings.html" class="flex items-center gap-2 px-4 py-2 text-body-md text-light-on-surface dark:text-dark-on-surface hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container">
+                <span class="material-symbols-outlined text-[18px]">person</span>
+                <span data-design-text-token="body-md">Profile &amp; Settings</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 p-gutter-lg flex flex-col gap-gutter-lg max-w-[1440px] w-full mx-auto">
+        <!-- Search, Filter, and Sort Controls -->
+        <section class="bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-md flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-gutter-md">
+          <label data-component-id="input-field-search" data-component-type="input-field" data-component-variant="search" class="relative flex items-center flex-1 max-w-md">
+            <span class="sr-only">Search tasks</span>
+            <span class="material-symbols-outlined absolute left-3 text-light-outline dark:text-dark-outline text-[18px]" aria-hidden="true">search</span>
+            <input id="search-input" type="search" oninput="renderTasks()" placeholder="Search tasks by title, description, or tag..." class="w-full pl-9 pr-4 py-2 rounded bg-light-surface-container-low dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md text-light-on-surface dark:text-dark-on-surface placeholder:text-light-outline dark:placeholder:text-dark-outline">
+          </label>
+
+          <div class="flex flex-wrap items-center gap-gutter-sm">
+            <select id="filter-priority" onchange="renderTasks()" aria-label="Filter by priority" class="px-3 py-2 rounded bg-light-surface-container-low dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant font-label text-label-md text-light-on-surface dark:text-dark-on-surface">
+              <option value="All">All Priorities</option>
+              <option value="High">High Priority</option>
+              <option value="Medium">Medium Priority</option>
+              <option value="Low">Low Priority</option>
+            </select>
+
+            <select id="filter-category" onchange="renderTasks()" aria-label="Filter by category" class="px-3 py-2 rounded bg-light-surface-container-low dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant font-label text-label-md text-light-on-surface dark:text-dark-on-surface">
+              <option value="All">All Categories</option>
+              <option value="Work">Work</option>
+              <option value="Design">Design</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Personal">Personal</option>
+            </select>
+
+            <select id="filter-status" onchange="renderTasks()" aria-label="Filter by status" class="px-3 py-2 rounded bg-light-surface-container-low dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant font-label text-label-md text-light-on-surface dark:text-dark-on-surface">
+              <option value="All">All Statuses</option>
+              <option value="Pending">Pending Only</option>
+              <option value="Completed">Completed Only</option>
+            </select>
+
+            <select id="sort-by" onchange="renderTasks()" aria-label="Sort tasks" class="px-3 py-2 rounded bg-light-surface-container-low dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant font-label text-label-md text-light-on-surface dark:text-dark-on-surface">
+              <option value="date">Sort: Due Date</option>
+              <option value="priority">Sort: Priority</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Pending Tasks Section -->
+        <section id="pending-section" class="flex flex-col gap-gutter-sm">
+          <div class="flex items-center justify-between">
+            <h2 class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface" data-design-text-token="headline-md">Pending Tasks (<span id="pending-count" class="tabular-nums">0</span>)</h2>
+          </div>
+          <div id="pending-list" class="grid grid-cols-1 gap-3"></div>
+        </section>
+
+        <!-- Completed Tasks Section -->
+        <section id="completed-section" class="flex flex-col gap-gutter-sm">
+          <div class="flex items-center justify-between">
+            <h2 class="font-headline text-headline-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="headline-md">Completed Tasks (<span id="completed-count" class="tabular-nums">0</span>)</h2>
+          </div>
+          <div id="completed-list" class="grid grid-cols-1 gap-3"></div>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <!-- Add / Edit Task Modal -->
+  <dialog id="task-modal" data-component-id="modal-standard" data-component-type="modal" data-component-variant="standard" aria-labelledby="task-modal-title" class="w-full max-w-lg rounded-lg bg-light-surface-container-lowest dark:bg-dark-surface-container-low text-light-on-surface dark:text-dark-on-surface border border-light-outline-variant dark:border-dark-outline-variant p-0 shadow-xl backdrop:bg-black/40">
+    <form id="task-form" onsubmit="saveTaskForm(event)">
+      <input type="hidden" id="edit-task-id">
+      <header class="flex items-center justify-between px-gutter-lg py-gutter-md border-b border-light-outline-variant dark:border-dark-outline-variant">
+        <h2 id="task-modal-title" data-design-text-token="title-lg" class="font-title text-title-lg">Add New Task</h2>
+        <button type="button" onclick="document.getElementById(&#39;task-modal&#39;).close()" aria-label="Close dialog" class="inline-flex items-center justify-center w-8 h-8 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant">
+          <span class="material-symbols-outlined text-[20px]">close</span>
+        </button>
+      </header>
+      <div class="p-gutter-lg flex flex-col gap-gutter-md">
+        <label class="flex flex-col gap-1.5">
+          <span data-design-text-token="label-md" class="font-label text-label-md">Task Title</span>
+          <input id="form-title" type="text" required placeholder="Enter task title" class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+        </label>
+        <label class="flex flex-col gap-1.5">
+          <span data-design-text-token="label-md" class="font-label text-label-md">Description</span>
+          <textarea id="form-desc" rows="2" placeholder="Add context or acceptance criteria..." class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md"></textarea>
+        </label>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+          <label class="flex flex-col gap-1.5">
+            <span data-design-text-token="label-md" class="font-label text-label-md">Due Date</span>
+            <input id="form-date" type="date" required class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+          </label>
+          <label class="flex flex-col gap-1.5">
+            <span data-design-text-token="label-md" class="font-label text-label-md">Due Time</span>
+            <input id="form-time" type="text" value="04:00 PM" placeholder="04:00 PM" class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+          </label>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-gutter-md">
+          <label class="flex flex-col gap-1.5">
+            <span data-design-text-token="label-md" class="font-label text-label-md">Priority</span>
+            <select id="form-priority" class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+              <option value="High">High</option>
+              <option value="Medium">Medium</option>
+              <option value="Low">Low</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-1.5">
+            <span data-design-text-token="label-md" class="font-label text-label-md">Category</span>
+            <select id="form-category" class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+              <option value="Work">Work</option>
+              <option value="Design">Design</option>
+              <option value="Engineering">Engineering</option>
+              <option value="Personal">Personal</option>
+            </select>
+          </label>
+        </div>
+        <label class="flex flex-col gap-1.5">
+          <span data-design-text-token="label-md" class="font-label text-label-md">Tags (comma separated)</span>
+          <input id="form-tags" type="text" placeholder="e.g., ui, q4, review" class="w-full px-3.5 py-2 rounded bg-light-surface-container-lowest dark:bg-dark-surface-container border border-light-outline-variant dark:border-dark-outline-variant text-body-md">
+        </label>
+      </div>
+      <footer class="flex items-center justify-end gap-gutter-sm px-gutter-lg py-gutter-md border-t border-light-outline-variant dark:border-dark-outline-variant bg-light-surface-container-low dark:bg-dark-surface-container">
+        <button type="button" onclick="document.getElementById(&#39;task-modal&#39;).close()" class="px-4 py-2 rounded border border-light-outline-variant dark:border-dark-outline-variant font-label text-label-lg">
+          <span data-design-text-token="label-lg">Cancel</span>
+        </button>
+        <button type="submit" class="px-4 py-2 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg">
+          <span data-design-text-token="label-lg">Save Task</span>
+        </button>
+      </footer>
+    </form>
+  </dialog>
+
+  <dialog id="mobile-nav-drawer" data-component-id="modal-drawer" data-component-type="modal" data-component-variant="drawer" aria-labelledby="mobile-nav-title" class="m-0 h-full max-h-none w-72 bg-light-surface-container-lowest dark:bg-dark-surface-container-low text-light-on-surface dark:text-dark-on-surface border-r border-light-outline-variant dark:border-dark-outline-variant p-0 backdrop:bg-black/40">
+    <header class="h-16 px-gutter-lg flex items-center justify-between border-b border-light-outline-variant dark:border-dark-outline-variant">
+      <h2 id="mobile-nav-title" class="font-headline text-headline-md" data-design-text-token="headline-md">TaskFlow</h2>
+      <button type="button" onclick="document.getElementById(&#39;mobile-nav-drawer&#39;).close()" aria-label="Close navigation menu" class="inline-flex items-center justify-center w-8 h-8 rounded">
+        <span class="material-symbols-outlined text-[20px]">close</span>
+      </button>
+    </header>
+    <nav class="p-3 flex flex-col gap-1">
+      <a href="../dashboard/Dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant font-label text-label-lg">Dashboard</a>
+      <a href="../tasks/MyTasks.html" class="flex items-center gap-3 px-3 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg">My Tasks</a>
+      <a href="../calendar/Calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant font-label text-label-lg">Calendar</a>
+      <a href="../analytics/Analytics.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant font-label text-label-lg">Analytics</a>
+      <a href="../settings/Settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant font-label text-label-lg">Settings</a>
+    </nav>
+  </dialog>
+
+  <script>
+    const DEFAULT_TASKS = [
+      { id: 1, title: "Design system token audit", description: "Verify contrast ratios and update button tokens across light and dark surfaces.", category: "Design", tags: ["tokens", "ui"], priority: "High", dueDate: "2026-11-25", dueTime: "09:30 AM", completed: false },
+      { id: 2, title: "Finalize Q4 product roadmap", description: "Align engineering milestones and design review dates for December release.", category: "Work", tags: ["planning", "q4"], priority: "High", dueDate: "2026-11-25", dueTime: "04:30 PM", completed: false },
+      { id: 3, title: "Sprint 14 API integration sync", description: "Review REST endpoints for task filtering and MongoDB pagination.", category: "Engineering", tags: ["api", "sync"], priority: "Medium", dueDate: "2026-11-25", dueTime: "01:00 PM", completed: true },
+      { id: 4, title: "Submit quarterly tax estimates", description: "Upload Q4 invoices and confirm payment receipt.", category: "Personal", tags: ["finance"], priority: "High", dueDate: "2026-11-23", dueTime: "05:00 PM", completed: false },
+      { id: 5, title: "Refactor MongoDB task schema", description: "Add compound index on userId and dueDate for calendar queries.", category: "Engineering", tags: ["database"], priority: "Medium", dueDate: "2026-11-24", dueTime: "03:00 PM", completed: false },
+      { id: 6, title: "Prepare user interview script", description: "Draft 8 usability questions for TaskFlow calendar interactions.", category: "Design", tags: ["research"], priority: "Low", dueDate: "2026-11-27", dueTime: "11:00 AM", completed: false },
+      { id: 7, title: "Publish November changelog", description: "Summarize dark mode and analytics improvements for customers.", category: "Work", tags: ["release"], priority: "Medium", dueDate: "2026-11-28", dueTime: "02:00 PM", completed: true }
+    ];
+
+    function loadTasks() {
+      try {
+        const saved = localStorage.getItem("taskflow_tasks");
+        return saved ? JSON.parse(saved) : DEFAULT_TASKS;
+      } catch (e) { return DEFAULT_TASKS; }
+    }
+    function saveTasks(list) {
+      try { localStorage.setItem("taskflow_tasks", JSON.stringify(list)); } catch (e) {}
+    }
+    let tasks = loadTasks();
+
+    const priorityRank = { High: 1, Medium: 2, Low: 3 };
+
+    function priorityBadge(priority) {
+      if (priority === "High") return '<span class="px-2.5 py-0.5 rounded-full bg-light-error-container dark:bg-dark-error-container text-light-on-error-container dark:text-dark-on-error-container font-label text-label-md">High</span>';
+      if (priority === "Medium") return '<span class="px-2.5 py-0.5 rounded-full bg-light-surface-container-high dark:bg-dark-surface-container-high text-light-tertiary dark:text-dark-tertiary font-label text-label-md">Medium</span>';
+      return '<span class="px-2.5 py-0.5 rounded-full bg-light-secondary-container dark:bg-dark-secondary-container text-light-on-secondary-container dark:text-dark-on-secondary-container font-label text-label-md">Low</span>';
+    }
+
+    function taskCardHTML(t) {
+      const tagsHtml = (t.tags || []).map(tag => `<span class="px-2 py-0.5 rounded bg-light-surface-container dark:bg-dark-surface-container text-light-on-surface-variant dark:text-dark-on-surface-variant font-mono text-mono-sm">#${tag}</span>`).join("");
+      return `
+        <article class="bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-md flex flex-col sm:flex-row sm:items-center justify-between gap-gutter-md">
+          <div class="flex items-start gap-3 min-w-0">
+            <input type="checkbox" ${t.completed ? "checked" : ""} onchange="toggleComplete(${t.id})" aria-label="Mark ${t.title} completed" class="mt-1 w-4 h-4 rounded border-light-outline dark:border-dark-outline text-light-primary dark:text-dark-primary">
+            <div class="min-w-0 flex flex-col gap-1">
+              <div class="flex flex-wrap items-center gap-2">
+                <h3 class="font-title text-title-md ${t.completed ? "line-through text-light-outline dark:text-dark-outline" : "text-light-on-surface dark:text-dark-on-surface"}" data-design-text-token="title-md">${t.title}</h3>
+                ${priorityBadge(t.priority)}
+                <span class="px-2.5 py-0.5 rounded-full bg-light-surface-container dark:bg-dark-surface-container text-light-on-surface-variant dark:text-dark-on-surface-variant font-label text-label-md">${t.category}</span>
+              </div>
+              <p class="font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="body-md">${t.description || "No description provided."}</p>
+              <div class="flex flex-wrap items-center gap-2 pt-1">
+                <span class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant tabular-nums" data-design-text-token="mono-sm">${t.dueDate} • ${t.dueTime || "05:00 PM"}</span>
+                ${tagsHtml}
+              </div>
+            </div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <button type="button" onclick="openTaskModal(${t.id})" aria-label="Edit task" class="inline-flex items-center gap-1 px-3 py-1.5 rounded border border-light-outline-variant dark:border-dark-outline-variant text-light-on-surface dark:text-dark-on-surface hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-md">
+              <span class="material-symbols-outlined text-[16px]">edit</span>
+              <span data-design-text-token="label-md">Edit</span>
+            </button>
+            <button type="button" onclick="deleteTask(${t.id})" aria-label="Delete task" class="inline-flex items-center justify-center w-8 h-8 rounded text-light-error dark:text-dark-error hover:bg-light-error-container dark:hover:bg-dark-error-container">
+              <span class="material-symbols-outlined text-[18px]">delete</span>
+            </button>
+          </div>
+        </article>
+      `;
+    }
+
+    function renderTasks() {
+      const q = document.getElementById("search-input").value.toLowerCase();
+      const prio = document.getElementById("filter-priority").value;
+      const cat = document.getElementById("filter-category").value;
+      const status = document.getElementById("filter-status").value;
+      const sort = document.getElementById("sort-by").value;
+
+      let filtered = tasks.filter(t => {
+        const matchQ = !q || t.title.toLowerCase().includes(q) || (t.description || "").toLowerCase().includes(q) || (t.tags || []).some(tg => tg.toLowerCase().includes(q));
+        const matchP = prio === "All" || t.priority === prio;
+        const matchC = cat === "All" || t.category === cat;
+        const matchS = status === "All" || (status === "Pending" ? !t.completed : t.completed);
+        return matchQ && matchP && matchC && matchS;
+      });
+
+      filtered.sort((a, b) => sort === "priority" ? priorityRank[a.priority] - priorityRank[b.priority] : a.dueDate.localeCompare(b.dueDate));
+
+      const pending = filtered.filter(t => !t.completed);
+      const completed = filtered.filter(t => t.completed);
+
+      document.getElementById("pending-count").textContent = pending.length;
+      document.getElementById("completed-count").textContent = completed.length;
+
+      document.getElementById("pending-list").innerHTML = pending.length ? pending.map(taskCardHTML).join("") : '<p class="p-6 rounded-md bg-light-surface-container-low dark:bg-dark-surface-container text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant">No pending tasks match your filters.</p>';
+      document.getElementById("completed-list").innerHTML = completed.length ? completed.map(taskCardHTML).join("") : '<p class="p-6 rounded-md bg-light-surface-container-low dark:bg-dark-surface-container text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant">No completed tasks yet.</p>';
+    }
+
+    function toggleComplete(id) {
+      tasks = tasks.map(t => t.id === id ? { ...t, completed: !t.completed } : t);
+      saveTasks(tasks);
+      renderTasks();
+    }
+
+    function deleteTask(id) {
+      tasks = tasks.filter(t => t.id !== id);
+      saveTasks(tasks);
+      renderTasks();
+    }
+
+    function openTaskModal(id) {
+      const modal = document.getElementById("task-modal");
+      if (id) {
+        const t = tasks.find(x => x.id === id);
+        document.getElementById("task-modal-title").textContent = "Edit Task";
+        document.getElementById("edit-task-id").value = t.id;
+        document.getElementById("form-title").value = t.title;
+        document.getElementById("form-desc").value = t.description || "";
+        document.getElementById("form-date").value = t.dueDate;
+        document.getElementById("form-time").value = t.dueTime || "04:00 PM";
+        document.getElementById("form-priority").value = t.priority;
+        document.getElementById("form-category").value = t.category;
+        document.getElementById("form-tags").value = (t.tags || []).join(", ");
+      } else {
+        document.getElementById("task-modal-title").textContent = "Add New Task";
+        document.getElementById("task-form").reset();
+        document.getElementById("edit-task-id").value = "";
+        document.getElementById("form-date").value = "2026-11-26";
+      }
+      modal.showModal();
+    }
+
+    function saveTaskForm(e) {
+      e.preventDefault();
+      const id = document.getElementById("edit-task-id").value;
+      const payload = {
+        title: document.getElementById("form-title").value.trim(),
+        description: document.getElementById("form-desc").value.trim(),
+        dueDate: document.getElementById("form-date").value,
+        dueTime: document.getElementById("form-time").value.trim() || "05:00 PM",
+        priority: document.getElementById("form-priority").value,
+        category: document.getElementById("form-category").value,
+        tags: document.getElementById("form-tags").value.split(",").map(s => s.trim()).filter(Boolean)
+      };
+      if (id) {
+        tasks = tasks.map(t => t.id === Number(id) ? { ...t, ...payload } : t);
+      } else {
+        tasks.unshift({ id: Date.now(), ...payload, completed: false });
+      }
+      saveTasks(tasks);
+      document.getElementById("task-modal").close();
+      renderTasks();
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      document.getElementById("theme-icon").textContent = isDark ? "light_mode" : "dark_mode";
+      try { localStorage.setItem("taskflow_theme", isDark ? "dark" : "light"); } catch (e) {}
+    }
+
+    try {
+      if (localStorage.getItem("taskflow_theme") === "dark") {
+        document.documentElement.classList.add("dark");
+        document.getElementById("theme-icon").textContent = "light_mode";
+      }
+    } catch (e) {}
+
+    renderTasks();
+  </script>
+
+
+</body></html>

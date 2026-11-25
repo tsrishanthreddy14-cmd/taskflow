@@ -1,0 +1,425 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analytics — TaskFlow</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="b9a2ac788be3e5fe===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'success': '#006A61',
+        'on-success': '#FFFFFF',
+        'warning': '#A73400',
+        'on-warning': '#FFFFFF',
+        'light-primary': '#0037B0',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#1D4ED8',
+        'light-on-primary-container': '#CAD3FF',
+        'light-secondary': '#006A61',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#86F2E4',
+        'light-on-secondary-container': '#006F66',
+        'light-tertiary': '#7F2500',
+        'light-on-tertiary': '#FFFFFF',
+        'light-tertiary-container': '#A73400',
+        'light-on-tertiary-container': '#FFC9B7',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-error-container': '#FFDAD6',
+        'light-on-error-container': '#93000A',
+        'light-background': '#FAF8FF',
+        'light-on-background': '#1A1B23',
+        'light-surface': '#FAF8FF',
+        'light-surface-dim': '#D9D9E5',
+        'light-surface-bright': '#FAF8FF',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F3F2FE',
+        'light-surface-container': '#EDEDF9',
+        'light-surface-container-high': '#E8E7F3',
+        'light-surface-container-highest': '#E2E1ED',
+        'light-on-surface': '#1A1B23',
+        'light-surface-variant': '#E0E1F4',
+        'light-on-surface-variant': '#434655',
+        'light-outline': '#747686',
+        'light-outline-variant': '#C4C5D7',
+        'light-inverse-surface': '#2E3039',
+        'light-inverse-on-surface': '#F0F0FB',
+        'light-inverse-primary': '#B7C4FF',
+        'dark-primary': '#B7C4FF',
+        'dark-on-primary': '#002682',
+        'dark-primary-container': '#1D4ED8',
+        'dark-on-primary-container': '#CAD3FF',
+        'dark-secondary': '#6BD8CB',
+        'dark-on-secondary': '#003732',
+        'dark-secondary-container': '#29A195',
+        'dark-on-secondary-container': '#001D1A',
+        'dark-tertiary': '#FFB59C',
+        'dark-on-tertiary': '#5C1900',
+        'dark-tertiary-container': '#A73400',
+        'dark-on-tertiary-container': '#FFC9B7',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-error-container': '#93000A',
+        'dark-on-error-container': '#FFDAD6',
+        'dark-background': '#11131B',
+        'dark-on-background': '#E2E1ED',
+        'dark-surface': '#11131B',
+        'dark-surface-dim': '#11131B',
+        'dark-surface-bright': '#373942',
+        'dark-surface-container-lowest': '#0C0E16',
+        'dark-surface-container-low': '#1A1B23',
+        'dark-surface-container': '#1E1F27',
+        'dark-surface-container-high': '#282932',
+        'dark-surface-container-highest': '#33343D',
+        'dark-on-surface': '#E2E1ED',
+        'dark-surface-variant': '#434655',
+        'dark-on-surface-variant': '#C4C5D7',
+        'dark-outline': '#8E90A0',
+        'dark-outline-variant': '#434655',
+        'dark-inverse-surface': '#E2E1ED',
+        'dark-inverse-on-surface': '#2E3039',
+        'dark-inverse-primary': '#2151DA',
+      },
+      borderRadius: {
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '12px',
+        'lg': '16px',
+        'xl': '24px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '16px',
+        'gutter-lg': '24px',
+        'gutter-xl': '32px',
+        'section': '32px',
+        'page-margin': '24px',
+      },
+      fontFamily: {
+        'display': ['"Afacad Flux"', 'sans-serif'],
+        'headline': ['"Afacad Flux"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Source Code Pro"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['40px', { lineHeight: '46px', letterSpacing: '-0.5px', fontWeight: '700' }],
+        'display-lg-mobile': ['30px', { lineHeight: '36px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-lg': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['22px', { lineHeight: '28px', letterSpacing: '-0.15px', fontWeight: '600' }],
+        'title-lg': ['18px', { lineHeight: '24px', letterSpacing: '0px', fontWeight: '600' }],
+        'title-md': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-lg': ['15px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'surface-enter': '220ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@600;700&amp;family=Instrument+Sans:wght@400;500;600&amp;family=Source+Code+Pro:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>.material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons { display: inline-block; width: 1em; height: 1em; line-height: 1 !important; box-sizing: content-box; overflow: hidden; white-space: nowrap; direction: ltr; vertical-align: middle; }</style>
+</head>
+<body class="bg-light-background dark:bg-dark-background text-light-on-background dark:text-dark-on-background font-body antialiased">
+  <div class="min-h-screen flex bg-light-background dark:bg-dark-background">
+    <!-- Persistent Desktop Sidebar -->
+    <aside class="hidden lg:flex lg:flex-col w-64 shrink-0 min-h-screen bg-light-surface-container-lowest dark:bg-dark-surface-container-low border-r border-light-outline-variant dark:border-dark-outline-variant">
+      <div class="h-16 px-gutter-lg flex items-center gap-gutter-sm border-b border-light-outline-variant dark:border-dark-outline-variant">
+        <div class="w-8 h-8 rounded bg-light-primary dark:bg-dark-primary flex items-center justify-center text-light-on-primary dark:text-dark-on-primary">
+          <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 11l3 3L22 4"></path>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>
+          </svg>
+        </div>
+        <span class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface" data-design-text-token="headline-md">TaskFlow</span>
+      </div>
+
+      <nav aria-label="Main navigation" class="flex-1 px-3 py-gutter-md flex flex-col gap-1">
+        <a href="../dashboard/Dashboard.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">dashboard</span>
+          <span data-design-text-token="label-lg">Dashboard</span>
+        </a>
+        <a href="../tasks/MyTasks.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">check_box</span>
+          <span data-design-text-token="label-lg">My Tasks</span>
+        </a>
+        <a href="../calendar/Calendar.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">calendar_month</span>
+          <span data-design-text-token="label-lg">Calendar</span>
+        </a>
+        <a href="../analytics/Analytics.html" aria-current="page" class="flex items-center gap-3 px-3 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: &#39;FILL&#39; 1;">bar_chart</span>
+          <span data-design-text-token="label-lg">Analytics</span>
+        </a>
+        <a href="../settings/Settings.html" class="flex items-center gap-3 px-3 py-2.5 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container-low dark:hover:bg-dark-surface-container font-label text-label-lg transition-colors duration-state-change ease-state-change">
+          <span class="material-symbols-outlined text-[20px]">settings</span>
+          <span data-design-text-token="label-lg">Settings</span>
+        </a>
+      </nav>
+
+      <div class="p-gutter-md border-t border-light-outline-variant dark:border-dark-outline-variant">
+        <div class="p-3 rounded-md bg-light-surface-container-low dark:bg-dark-surface-container flex items-center gap-3">
+          <img src="https://lh3.googleusercontent.com/aida/ALJJyrCnLkx4YuuSFXlq_9maeESvdiXOhpJw4lxht73KaQ4bTcnkEFPjL07K9OfcKVY5Vzt8Kpc0UDD6Id64bcnGuVjLZL39CXFD4WNMH94dpyQPg7uPj-UqawVT1N37zhF0DYk57uJ_1M2-dEhs1zhsIR1cr_-JQCbTs0rulQIHSJGES0qF9boVlMDVGI0XImsi99t3xkMiCnGTh9ThaL27b5j7oR_-BL9mo0joWcGsctbBQswn1Q" alt="Alex Rivera" class="w-9 h-9 rounded-full object-cover shrink-0" data-stitch-original-src="1a8e935156802808===../../images/avatar_alex.jpg">
+          <div class="min-w-0">
+            <p class="font-label text-label-lg text-light-on-surface dark:text-dark-on-surface truncate" data-design-text-token="label-lg">Alex Rivera</p>
+            <p class="font-body text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant truncate" data-design-text-token="label-md">alex@taskflow.app</p>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <div class="flex-1 flex flex-col min-w-0 min-h-screen">
+      <header class="sticky top-0 z-20 h-16 px-gutter-lg bg-light-surface-container-lowest dark:bg-dark-surface-container-low border-b border-light-outline-variant dark:border-dark-outline-variant flex items-center justify-between gap-gutter-md">
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="document.getElementById(&#39;mobile-nav-drawer&#39;).showModal()" aria-label="Open navigation menu" class="lg:hidden inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface dark:text-dark-on-surface">
+            <span class="material-symbols-outlined text-[22px]">menu</span>
+          </button>
+          <h1 class="font-headline text-headline-md text-light-on-surface dark:text-dark-on-surface" data-design-text-token="headline-md">Analytics</h1>
+        </div>
+
+        <div class="flex items-center gap-2">
+          <a href="../tasks/MyTasks.html" class="inline-flex items-center justify-center gap-2 px-4 py-2 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg hover:opacity-90">
+            <span class="material-symbols-outlined text-[18px]" aria-hidden="true">add</span>
+            <span data-design-text-token="label-lg">Quick Add Task</span>
+          </a>
+          <button type="button" onclick="toggleTheme()" aria-label="Toggle color theme" class="inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container dark:hover:bg-dark-surface-container">
+            <span id="theme-icon" class="material-symbols-outlined text-[20px]">dark_mode</span>
+          </button>
+          <button type="button" aria-label="Notifications" class="relative inline-flex items-center justify-center w-9 h-9 rounded text-light-on-surface-variant dark:text-dark-on-surface-variant hover:bg-light-surface-container dark:hover:bg-dark-surface-container">
+            <span class="material-symbols-outlined text-[20px]">notifications</span>
+            <span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-light-error dark:bg-dark-error"></span>
+          </button>
+          <div class="relative">
+            <button type="button" onclick="document.getElementById(&#39;profile-menu&#39;).classList.toggle(&#39;hidden&#39;)" class="flex items-center gap-2 pl-2 pr-2 py-1 rounded hover:bg-light-surface-container dark:hover:bg-dark-surface-container">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrCnLkx4YuuSFXlq_9maeESvdiXOhpJw4lxht73KaQ4bTcnkEFPjL07K9OfcKVY5Vzt8Kpc0UDD6Id64bcnGuVjLZL39CXFD4WNMH94dpyQPg7uPj-UqawVT1N37zhF0DYk57uJ_1M2-dEhs1zhsIR1cr_-JQCbTs0rulQIHSJGES0qF9boVlMDVGI0XImsi99t3xkMiCnGTh9ThaL27b5j7oR_-BL9mo0joWcGsctbBQswn1Q" alt="Alex Rivera" class="w-8 h-8 rounded-full object-cover" data-stitch-original-src="1a8e935156802808===../../images/avatar_alex.jpg">
+              <span class="hidden sm:inline font-label text-label-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="label-lg">Alex</span>
+              <span class="material-symbols-outlined text-[18px] text-light-on-surface-variant dark:text-dark-on-surface-variant">expand_more</span>
+            </button>
+            <div id="profile-menu" class="hidden absolute right-0 mt-2 w-48 rounded-md bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant shadow-lg py-1 z-30">
+              <a href="../settings/Settings.html" class="flex items-center gap-2 px-4 py-2 text-body-md">Profile &amp; Settings</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="flex-1 p-gutter-lg flex flex-col gap-gutter-lg max-w-[1440px] w-full mx-auto">
+        <!-- Top Highlight Metrics -->
+        <section class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-gutter-md items-stretch">
+          <article class="h-full bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-2">
+            <span class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-lg">Total Productivity</span>
+            <p id="stat-productivity" class="font-display text-display-lg text-light-primary dark:text-dark-primary tabular-nums" data-design-text-token="display-lg">74%</p>
+            <span class="font-label text-label-md text-light-secondary dark:text-dark-secondary" data-design-text-token="label-md">Up 8% from last month</span>
+          </article>
+
+          <article class="h-full bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-2">
+            <span class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-lg">Most Productive Day</span>
+            <p class="font-display text-display-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="display-lg">Wednesday</p>
+            <span class="font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant tabular-nums" data-design-text-token="label-md">7.4 avg tasks completed</span>
+          </article>
+
+          <article class="h-full bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-2">
+            <span class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-lg">Daily Completion Avg</span>
+            <p class="font-display text-display-lg text-light-on-surface dark:text-dark-on-surface tabular-nums" data-design-text-token="display-lg">4.2</p>
+            <span class="font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-md">Tasks per workday</span>
+          </article>
+
+          <article class="h-full bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col justify-between gap-2">
+            <span class="font-label text-label-lg text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-lg">On-Time Rate</span>
+            <p class="font-display text-display-lg text-light-secondary dark:text-dark-secondary tabular-nums" data-design-text-token="display-lg">89%</p>
+            <span class="font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-md">Before due deadline</span>
+          </article>
+        </section>
+
+        <!-- Charts Row 1: Weekly Productivity + Monthly Completion -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-gutter-lg">
+          <article class="bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md">
+            <header>
+              <h2 class="font-title text-title-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="title-lg">Weekly Productivity Graph</h2>
+              <p class="font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="body-md">Daily completed tasks (Mon – Sun)</p>
+            </header>
+            <div class="grid grid-cols-7 gap-3 items-end h-48 pt-4 border-b border-light-outline-variant dark:border-dark-outline-variant">
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">4</span><div class="w-full max-w-[32px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:55%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">6</span><div class="w-full max-w-[32px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:80%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm text-light-secondary dark:text-dark-secondary tabular-nums">7</span><div class="w-full max-w-[32px] rounded-t bg-light-secondary dark:bg-dark-secondary" style="height:95%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">5</span><div class="w-full max-w-[32px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:68%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">4</span><div class="w-full max-w-[32px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:55%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">2</span><div class="w-full max-w-[32px] rounded-t bg-light-surface-variant dark:bg-dark-surface-variant" style="height:28%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">1</span><div class="w-full max-w-[32px] rounded-t bg-light-surface-variant dark:bg-dark-surface-variant" style="height:16%"></div></div>
+            </div>
+            <div class="grid grid-cols-7 gap-3 text-center font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant">
+              <span>Mon</span><span>Tue</span><span class="text-light-secondary dark:text-dark-secondary">Wed</span><span>Thu</span><span>Fri</span><span>Sat</span><span>Sun</span>
+            </div>
+          </article>
+
+          <article class="bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md">
+            <header>
+              <h2 class="font-title text-title-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="title-lg">Monthly Task Completion</h2>
+              <p class="font-body text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="body-md">6-month completion trend (Jun – Nov)</p>
+            </header>
+            <div class="grid grid-cols-6 gap-4 items-end h-48 pt-4 border-b border-light-outline-variant dark:border-dark-outline-variant">
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">48</span><div class="w-full max-w-[40px] rounded-t bg-light-surface-variant dark:bg-dark-surface-variant" style="height:48%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">62</span><div class="w-full max-w-[40px] rounded-t bg-light-surface-variant dark:bg-dark-surface-variant" style="height:62%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">57</span><div class="w-full max-w-[40px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:57%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">74</span><div class="w-full max-w-[40px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:74%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm tabular-nums">81</span><div class="w-full max-w-[40px] rounded-t bg-light-primary dark:bg-dark-primary" style="height:81%"></div></div>
+              <div class="flex flex-col items-center gap-1.5 h-full justify-end"><span class="font-mono text-mono-sm text-light-secondary dark:text-dark-secondary tabular-nums">89</span><div class="w-full max-w-[40px] rounded-t bg-light-secondary dark:bg-dark-secondary" style="height:90%"></div></div>
+            </div>
+            <div class="grid grid-cols-6 gap-4 text-center font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant">
+              <span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span class="text-light-secondary dark:text-dark-secondary">Nov</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- Charts Row 2: Completed vs Pending + Priority Distribution + Completion History -->
+        <section class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-lg">
+          <!-- Completed vs Pending & Priority Distribution (5 cols) -->
+          <article class="lg:col-span-5 bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-lg">
+            <div>
+              <h2 class="font-title text-title-lg text-light-on-surface dark:text-dark-on-surface mb-3" data-design-text-token="title-lg">Completed vs. Pending</h2>
+              <div id="status-bars" class="flex flex-col gap-3"></div>
+            </div>
+
+            <div class="pt-4 border-t border-light-outline-variant dark:border-dark-outline-variant">
+              <h2 class="font-title text-title-lg text-light-on-surface dark:text-dark-on-surface mb-3" data-design-text-token="title-lg">Priority Distribution</h2>
+              <div id="priority-bars" class="flex flex-col gap-3"></div>
+            </div>
+          </article>
+
+          <!-- Task Completion History (7 cols) -->
+          <article class="lg:col-span-7 bg-light-surface-container-lowest dark:bg-dark-surface-container-low border border-light-outline-variant dark:border-dark-outline-variant rounded-md p-gutter-lg flex flex-col gap-gutter-md">
+            <header class="flex items-center justify-between">
+              <h2 class="font-title text-title-lg text-light-on-surface dark:text-dark-on-surface" data-design-text-token="title-lg">Task Completion History</h2>
+              <span class="font-label text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant" data-design-text-token="label-md">Live task log</span>
+            </header>
+            <div id="history-list" class="flex flex-col divide-y divide-light-outline-variant dark:divide-dark-outline-variant"></div>
+          </article>
+        </section>
+      </main>
+    </div>
+  </div>
+
+  <dialog id="mobile-nav-drawer" class="m-0 h-full max-h-none w-72 bg-light-surface-container-lowest dark:bg-dark-surface-container-low text-light-on-surface dark:text-dark-on-surface border-r border-light-outline-variant dark:border-dark-outline-variant p-0 backdrop:bg-black/40">
+    <header class="h-16 px-gutter-lg flex items-center justify-between border-b border-light-outline-variant dark:border-dark-outline-variant">
+      <h2 class="font-headline text-headline-md">TaskFlow</h2>
+      <button type="button" onclick="document.getElementById(&#39;mobile-nav-drawer&#39;).close()" class="w-8 h-8 rounded flex items-center justify-center"><span class="material-symbols-outlined">close</span></button>
+    </header>
+    <nav class="p-3 flex flex-col gap-1">
+      <a href="../dashboard/Dashboard.html" class="px-3 py-2.5 rounded font-label text-label-lg">Dashboard</a>
+      <a href="../tasks/MyTasks.html" class="px-3 py-2.5 rounded font-label text-label-lg">My Tasks</a>
+      <a href="../calendar/Calendar.html" class="px-3 py-2.5 rounded font-label text-label-lg">Calendar</a>
+      <a href="../analytics/Analytics.html" class="px-3 py-2.5 rounded bg-light-primary dark:bg-dark-primary text-light-on-primary dark:text-dark-on-primary font-label text-label-lg">Analytics</a>
+      <a href="../settings/Settings.html" class="px-3 py-2.5 rounded font-label text-label-lg">Settings</a>
+    </nav>
+  </dialog>
+
+  <script>
+    const DEFAULT_TASKS = [
+      { id: 1, title: "Design system token audit", category: "Design", priority: "High", dueDate: "2026-11-25", completed: false },
+      { id: 2, title: "Finalize Q4 product roadmap", category: "Work", priority: "High", dueDate: "2026-11-25", completed: false },
+      { id: 3, title: "Sprint 14 API integration sync", category: "Engineering", priority: "Medium", dueDate: "2026-11-25", completed: true },
+      { id: 4, title: "Submit quarterly tax estimates", category: "Personal", priority: "High", dueDate: "2026-11-23", completed: false },
+      { id: 5, title: "Refactor MongoDB task schema", category: "Engineering", priority: "Medium", dueDate: "2026-11-24", completed: false },
+      { id: 6, title: "Prepare user interview script", category: "Design", priority: "Low", dueDate: "2026-11-27", completed: false },
+      { id: 7, title: "Publish November changelog", category: "Work", priority: "Medium", dueDate: "2026-11-28", completed: true }
+    ];
+    let tasks = DEFAULT_TASKS;
+    try { const s = localStorage.getItem("taskflow_tasks"); if (s) tasks = JSON.parse(s); } catch (e) {}
+
+    function renderAnalytics() {
+      const total = tasks.length || 1;
+      const completed = tasks.filter(t => t.completed).length;
+      const pending = tasks.length - completed;
+      const compPct = Math.round((completed / total) * 100);
+      const pendPct = 100 - compPct;
+
+      document.getElementById("stat-productivity").textContent = compPct + "%";
+
+      document.getElementById("status-bars").innerHTML = `
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between font-label text-label-md"><span>Completed (${completed})</span><span class="tabular-nums">${compPct}%</span></div>
+          <div class="w-full h-2.5 rounded-full bg-light-surface-container dark:bg-dark-surface-container overflow-hidden"><div class="h-full bg-light-secondary dark:bg-dark-secondary rounded-full" style="width:${compPct}%"></div></div>
+        </div>
+        <div class="flex flex-col gap-1">
+          <div class="flex justify-between font-label text-label-md"><span>Pending (${pending})</span><span class="tabular-nums">${pendPct}%</span></div>
+          <div class="w-full h-2.5 rounded-full bg-light-surface-container dark:bg-dark-surface-container overflow-hidden"><div class="h-full bg-light-primary dark:bg-dark-primary rounded-full" style="width:${pendPct}%"></div></div>
+        </div>
+      `;
+
+      const high = tasks.filter(t => t.priority === "High").length;
+      const med = tasks.filter(t => t.priority === "Medium").length;
+      const low = tasks.filter(t => t.priority === "Low").length;
+
+      document.getElementById("priority-bars").innerHTML = [
+        { label: "High Priority", count: high, color: "bg-light-error dark:bg-dark-error" },
+        { label: "Medium Priority", count: med, color: "bg-light-tertiary dark:bg-dark-tertiary" },
+        { label: "Low Priority", count: low, color: "bg-light-secondary dark:bg-dark-secondary" }
+      ].map(r => {
+        const pct = Math.round((r.count / total) * 100);
+        return `
+          <div class="flex flex-col gap-1">
+            <div class="flex justify-between font-label text-label-md"><span>${r.label} (${r.count})</span><span class="tabular-nums">${pct}%</span></div>
+            <div class="w-full h-2.5 rounded-full bg-light-surface-container dark:bg-dark-surface-container overflow-hidden"><div class="h-full ${r.color} rounded-full" style="width:${pct}%"></div></div>
+          </div>
+        `;
+      }).join("");
+
+      const completedTasks = tasks.filter(t => t.completed);
+      document.getElementById("history-list").innerHTML = completedTasks.length
+        ? completedTasks.map(t => `
+          <div class="py-3 flex items-center justify-between gap-3">
+            <div class="flex items-center gap-3 min-w-0">
+              <span class="material-symbols-outlined text-light-secondary dark:text-dark-secondary text-[20px]" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+              <div class="min-w-0">
+                <p class="font-label text-label-lg text-light-on-surface dark:text-dark-on-surface truncate">${t.title}</p>
+                <p class="font-body text-label-md text-light-on-surface-variant dark:text-dark-on-surface-variant">${t.category} • ${t.priority} Priority</p>
+              </div>
+            </div>
+            <span class="font-mono text-mono-sm text-light-on-surface-variant dark:text-dark-on-surface-variant tabular-nums shrink-0">${t.dueDate}</span>
+          </div>
+        `).join("")
+        : '<p class="py-4 text-body-md text-light-on-surface-variant dark:text-dark-on-surface-variant">Complete tasks in My Tasks to populate your history.</p>';
+    }
+
+    function toggleTheme() {
+      const isDark = document.documentElement.classList.toggle("dark");
+      document.getElementById("theme-icon").textContent = isDark ? "light_mode" : "dark_mode";
+      try { localStorage.setItem("taskflow_theme", isDark ? "dark" : "light"); } catch (e) {}
+    }
+    try {
+      if (localStorage.getItem("taskflow_theme") === "dark") {
+        document.documentElement.classList.add("dark");
+        document.getElementById("theme-icon").textContent = "light_mode";
+      }
+    } catch (e) {}
+
+    renderAnalytics();
+  </script>
+
+
+</body></html>

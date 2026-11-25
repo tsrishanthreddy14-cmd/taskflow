@@ -1,0 +1,6 @@
+{
+  "name": "TaskFlow",
+  "description": "A clean productivity and task management workspace with dashboard analytics, task lists, calendar scheduling, and light/dark themes.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
